@@ -56,18 +56,111 @@
 }
 .ex-6-img, .ex-7-img, .ex-8-img {
     width: 500px;
+
 }
+
+.ex-6-img:hover{
+    filter: grayscale(100%);
+
+}
+
+.ex-7-img{
+    transition: all 5s;
+
+}
+
+.ex-7-img:hover{
+    width: 1000px;
+    filter: sepia(100%);
+}
+
+.ex-8-img{
+    border-radius: 20px;
+    animation-name: name;
+    animation-duration: 5s;
+    position: relative;
+  
+}
+
+@keyframes name {
+    0%{
+        left: 0;
+    }
+    50%{
+        
+        left: 300px;
+
+    }
+    100%{
+        
+        left: 0px;
+
+    }
+}
+
+.ex-8-img:active{
+    width: 50px;
+}
+
+
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: all 5s ;
 }
+
+.ex-9-img:active{
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
-.ex-11-icon {
+
+@keyframes rotate {
+    0%{
+        rotate: 0;
+    }
+    100%{
+        
+        rotate: 360deg;
+
+    }
+}
+
+.ex-11-icon{
     font-size: 60px;
+
 }
+
+.ex-11-icon:hover {
+    
+    animation-name: rotate;
+    animation-duration: 5s;
+}
+
+ @keyframes rotate {
+    0%{
+        rotate: 0;
+    }
+    75%{
+        
+        rotate: 270deg;
+
+    }
+    100%{
+        rotate: 0;
+    }
+  }
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -88,6 +181,8 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    animation-name: top;
+    animation-duration: 5s;
 }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
@@ -96,4 +191,66 @@
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    animation-name: bottom;
+    animation-duration: 5s;
 }
+
+@keyframes top {
+    0%{
+        left: 20px;
+        top: -10px;
+    }
+    25%{
+        
+        left: 140px;
+        top: -10px;
+
+    }
+    50%{
+        left: 140px;
+        top: 50px;
+    }
+    75%{
+        left: 0;
+        top:50px;
+    }
+    90%{
+        left: -10px;
+        top:0;
+    }
+    100%{
+        left: 20px;
+        top: -10px;
+    }
+    
+}
+
+@keyframes bottom {
+    0%{
+        right: 20px;
+        bottom: -10px;
+    }
+    25%{
+        
+        right: 140px;
+        bottom: -10px;
+
+    }
+    50%{
+        right: 140px;
+        bottom: 50px;
+    }
+    75%{
+        right: 0;
+        bottom:50px;
+    }
+    90%{
+        right: -10px;
+        bottom:0;
+    }
+    100%{
+        right: 20px;
+        bottom: -10px;
+    }
+}
+
